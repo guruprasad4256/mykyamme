@@ -1,0 +1,21 @@
+
+> site@1.1.0 build /Users/mdrobi/Documents/GitHub/metajobs/apps/site
+> next build
+
+info  - Loaded env from /Users/mdrobi/Documents/GitHub/metajobs/apps/site/.env
+info  - Linting and checking validity of types...
+error - ESLint: Failed to load plugin 'prettier' declared in '.eslintrc.json': Cannot find module 'eslint-plugin-prettier' Require stack: - /Users/mdrobi/Documents/GitHub/metajobs/apps/site/__placeholder__.js Referenced from: /Users/mdrobi/Documents/GitHub/metajobs/apps/site/.eslintrc.json
+Failed to compile.
+
+./pages/api/v1/email/send.tsx:73:33
+Type error: Argument of type '{ userEmail: any; emailData: { senderAddress: string; subject: string; message: string; emailType: any; }; userId: any; emailType: any; }' is not assignable to parameter of type '{ input: { emailData: { senderAddress: string; subject: string; message: string; emailType: string; }; userEmail: string; userId: string; emailType: string; jobInfo: { jobTitle: string; category: string; }; accessToken: string; forgetPassToken: string; }; }'.
+  Property 'input' is missing in type '{ userEmail: any; emailData: { senderAddress: string; subject: string; message: string; emailType: any; }; userId: any; emailType: any; }' but required in type '{ input: { emailData: { senderAddress: string; subject: string; message: string; emailType: string; }; userEmail: string; userId: string; emailType: string; jobInfo: { jobTitle: string; category: string; }; accessToken: string; forgetPassToken: string; }; }'.
+
+[0m [90m 71 | [39m    }[33m;[39m[0m
+[0m [90m 72 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 73 | [39m    [36mawait[39m sendNotificationEmail(inputEmailData)[33m;[39m[0m
+[0m [90m    | [39m                                [31m[1m^[22m[39m[0m
+[0m [90m 74 | [39m[0m
+[0m [90m 75 | [39m    res[33m.[39mstatus([35m200[39m)[33m.[39msend({[0m
+[0m [90m 76 | [39m      message[33m:[39m [32m"Email sent successfully"[39m[33m,[39m[0m
+ ELIFECYCLE  Command failed with exit code 1.
